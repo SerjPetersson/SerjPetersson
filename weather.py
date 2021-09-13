@@ -20,7 +20,7 @@ def get_weather():
 	params = {'APPID': key, 'q': city, 'units': 'metric'}
 	result = requests.get(url, params=params)
 	weather = result.json()
-	info['text'] = f'{str(weather["name"])}: {weather["main"]["temp"]}'
+	info['text'] = f'{str(weather["name"])}: {weather["main"]["temp"]}°'
 
 frame_top = Frame(root, bg='#61aab2', bd=5)
 frame_top.place(relx=0.15, rely=0.15, relwidth=0.7, relheight=0.25)
